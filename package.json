@@ -11,13 +11,15 @@
   },
   "dependencies": {
     "@million/lint": "^1.0.0-rc.1",
+    "@tanstack/react-query": "^5.40.0",
     "antd": "^5.17.3",
     "axios": "^1.7.2",
     "million": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^6.23.1",
-    "swiper": "^11.1.3"
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

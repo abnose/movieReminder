@@ -30,7 +30,8 @@ class RequestConfig {
 
         this.request.instance.interceptors.response.use(
             (response: any) => {
-                console.log(response)
+                // console.log(response)
+                return response
             }
         )
     }

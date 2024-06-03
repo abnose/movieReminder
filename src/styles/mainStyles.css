@@ -1,0 +1,9 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: rgb(33, 33, 48);
+    overflow-x: hidden;
+    background: rgb(20,57,130);
+    background: linear-gradient(90deg, rgba(20,57,130,1) 0%, rgba(20,35,93,1) 33%, rgba(6,6,34,0.7609244381346288) 93%); 
+}
