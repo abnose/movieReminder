@@ -1,9 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./pages/Root";
 import HomePage from "./pages/HomePage";
-import About from "./pages/AboutPage";
+import WaitingPage from "./pages/WaitingPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { loader as contactLoader } from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
 function App() {
   const queryClient = new QueryClient();
@@ -17,11 +16,10 @@ function App() {
         {
           index: true,
           element: <HomePage />,
-          loader: contactLoader(queryClient),
         },
         {
-          path: "About",
-          element: <About />,
+          path: "WaitingFor",
+          element: <WaitingPage />,
         },
       ],
     },

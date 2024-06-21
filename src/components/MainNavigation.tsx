@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {
   AppstoreOutlined,
-  MailOutlined,
+  HomeOutlined,
+  FieldTimeOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
@@ -12,19 +13,24 @@ type MenuItem = Required<MenuProps>["items"][number];
 
 const items: MenuItem[] = [
   {
-    label: "Home",
+    label: (
+      <NavLink to="/" className={({ isActive }) => (isActive ? "" : "")}>
+        Home
+      </NavLink>
+    ),
     key: "Home",
-    icon: <MailOutlined />,
+    icon: <HomeOutlined />,
   },
   {
-    key: "About",
+    key: "Waiting List",
+    icon: <FieldTimeOutlined />,
+
     label: (
       <NavLink
-        to="/About"
+        to="/WaitingFor"
         className={({ isActive }) => (isActive ? "" : "")}
-        rel="noopener noreferrer"
       >
-        About Me
+        Waiting List
       </NavLink>
     ),
   },
