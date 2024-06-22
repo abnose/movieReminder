@@ -1,0 +1,106 @@
+.movieDetailCard {
+    width: 95%;
+    min-height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: white;
+    position: relative;
+}
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.imageStyle {
+    position: relative;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.imageStyle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(20,57,130,1) 5%, rgba(20,35,93,1) 30%, rgba(6,6,34,0.05) 80%);  
+    z-index: 55;
+}
+
+
+.container { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2em;
+}
+.detailCon {
+    color: silver;
+    position: absolute;
+    bottom: 0;
+    z-index: 105;
+    height: 60%;
+    padding: .5em .75em; 
+    text-shadow: 0 0 10px black;
+}
+
+.conName {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.tagline {
+    background: rgb(5, 0, 70);
+    color: white;
+    padding: .25em .75em;
+    border-radius: 5px;
+    box-shadow: 0 0 1px black;
+    border: 1px solid silver;
+}
+.title {
+    padding-right: .5em;
+    font-size: 1.5em;
+}
+
+.extraCon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.runtime {
+}
+.vote_average span {
+    margin: .5em;
+    background: rgb(5, 0, 70);
+    color: white;
+    padding: .25em .75em;
+    border-radius: 5px;
+    box-shadow: 0 0 1px black;
+    border: 1px solid silver;
+}
+.runtime span{
+    margin: .5em;
+    background: rgb(5, 0, 70);
+    color: white;
+    padding: .25em .75em;
+    border-radius: 5px;
+    box-shadow: 0 0 1px black;
+    border: 1px solid silver;
+}
+.genres { 
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.genres h5 { 
+    margin: .5em;
+    background: rgb(5, 0, 70);
+    color: white;
+    padding: .25em .75em;
+    border-radius: 5px;
+    box-shadow: 0 0 1px black;
+    border: 1px solid silver;
+}

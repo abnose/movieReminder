@@ -24,6 +24,13 @@ class MovieRequest {
       return response;
     });
   }
+
+  public getMovieDetail(id: number) {
+    return this.api.get(`/${id}?language=en-US`).then((response) => {
+      return response;
+    });
+  }
+
 }
 
 export default MovieRequest;

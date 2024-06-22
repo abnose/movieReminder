@@ -4,6 +4,9 @@ import { HeartOutlined } from "@ant-design/icons";
 import { Button, Card } from "antd";
 import { useEffect } from "react";
 import Push from "push.js";
+import { Link } from "react-router-dom";
+import testImage from "../assets/test.jpg";
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -93,34 +96,39 @@ const Swiper = ({ header, data = [], handleFavList }) => {
         draggable={true}
       >
         {data?.map((item) => (
-          <Card key={item.id} className={styles.container}>
-            <img
-              src={`http://image.tmdb.org/t/p/w500/${item.backdrop_path}`}
-              alt=""
-            />
-            <p className={styles.movieName}>{item.original_title}</p>
-            {header == "Waitng For" && (
-              <div className={styles.timer}>
-                {daysUntil(
-                  item.release_date,
-                  item.original_title,
-                  item.id,
-                  item.isSentNotif
-                )}
+          <Link key={item.id} to={`/Movie-Detail/${item.id}`}>
+            <Card className={styles.container}>
+              <div className={styles.swiperImage}>
+                <img
+                  className={styles.image}
+                  src={`http://image.tmdb.org/t/p/w500/${item.backdrop_path}`}
+                  alt=""
+                />
               </div>
-            )}
-            <Button
-              danger={faveList?.some((el) => el.id === item.id)}
-              type="primary"
-              shape="circle"
-              icon={<HeartOutlined />}
-              size={"large"}
-              className={styles.favBtn}
-              onClick={() => {
-                handleAddFav(item);
-              }}
-            />
-          </Card>
+              <p className={styles.movieName}>{item.original_title}</p>
+              {header == "Waitng For" && (
+                <div className={styles.timer}>
+                  {daysUntil(
+                    item.release_date,
+                    item.original_title,
+                    item.id,
+                    item.isSentNotif
+                  )}
+                </div>
+              )}
+              <Button
+                danger={faveList?.some((el) => el.id === item.id)}
+                type="primary"
+                shape="circle"
+                icon={<HeartOutlined />}
+                size={"large"}
+                className={styles.favBtn}
+                onClick={() => {
+                  handleAddFav(item);
+                }}
+              />
+            </Card>
+          </Link>
         ))}
       </Carousel>
     </>

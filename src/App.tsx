@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import WaitingPage from "./pages/WaitingPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ErrorPage from "./pages/ErrorPage";
+import MovieDetail from "./pages/MovieDetail";
 function App() {
   const queryClient = new QueryClient();
 
@@ -20,6 +21,10 @@ function App() {
         {
           path: "WaitingFor",
           element: <WaitingPage />,
+        },
+        {
+          path: "Movie-Detail/:id",
+          element: <MovieDetail />,
         },
       ],
     },
